@@ -1,13 +1,13 @@
 import org.scalatest._
 
 class AttacTypeSpec extends FlatSpec with DiagrammedAssertions {
-  it should "type name is ほのお" in {
+  it should "type is ほのお" in {
     var attackType: AttackType = new AttackType(Fire)
-    assert(attackType.name() === "ほのお")
+    assert(attackType.typeof() === Fire)
   }
 
-  it should "type name is みず" in {
+  it should "type is みず" in {
     var attackType: AttackType = new AttackType(Water)
-    assert(attackType.name() === "みず")
+    assert(attackType.typeof() === Water)
   }
 }
