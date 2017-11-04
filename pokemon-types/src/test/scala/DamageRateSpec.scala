@@ -14,4 +14,11 @@ class DamageRateSpec extends FlatSpec with DiagrammedAssertions {
     var damageRate: DamageRate = new DamageRate()
     assert(damageRate.rate(attack, deffece) === 0.5)
   }
+
+  it should "attack type is blockness of deffence type => damage is 0x" in {
+    var attack: AttackType = new AttackType(Fight)
+    var deffece: DeffenceType = new DeffenceType(Ghost)
+    var damageRate: DamageRate = new DamageRate()
+    assert(damageRate.rate(attack, deffece) === 0)
+  }
 }
