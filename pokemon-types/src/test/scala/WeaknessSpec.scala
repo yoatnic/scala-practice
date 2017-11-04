@@ -16,9 +16,9 @@ class WeaknessSpec extends FlatSpec with DiagrammedAssertions {
     assert(weakness.types() === Set(Fire))
   }
 
-  it should "いわ has weakness types みず, くさ" in {
+  it should "いわ has weakness types みず, くさ, かくとう" in {
     var weakness: Weakness = new Weakness(Rock)
-    assert(weakness.types() === Set(Water, Glass))
+    assert(weakness.types() === Set(Water, Glass, Fight))
   }
 
   it should "ゴースト has weakness types none" in {
