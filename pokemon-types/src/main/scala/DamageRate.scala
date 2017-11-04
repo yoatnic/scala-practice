@@ -6,6 +6,10 @@ class DamageRate() {
     if (deffence.reduceness()(attack.typeof())) {
       return 0.5
     }
+    if (deffence.blockness()(attack.typeof())) {
+      return 0
+    }
+
     return 1
   }
 }
