@@ -1,5 +1,5 @@
-class DeffenceType(val typeName: String) {
+class DeffenceType(val deffenceType: TypeEnum) {
   def name(): String = {
-    typeName
+    deffenceType.name
   }
 }

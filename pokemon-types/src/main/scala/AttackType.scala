@@ -1,5 +1,5 @@
-class AttackType(val typeName: String) {
+class AttackType(val attackType: TypeEnum) {
   def name(): String = {
-    typeName
+    attackType.name
   }
 }
