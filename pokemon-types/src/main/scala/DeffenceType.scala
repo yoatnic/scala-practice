@@ -12,4 +12,9 @@ class DeffenceType(val deffenceType: TypeEnum) {
     var r: Reduceness = new Reduceness(deffenceType)
     r.types()
   }
+
+  def blockness(): Set[TypeEnum] = {
+    var b: Blockness = new Blockness(deffenceType)
+    b.types()
+  }
 }
