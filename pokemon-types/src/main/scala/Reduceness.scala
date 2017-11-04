@@ -1,5 +1,5 @@
-class Reduceness(val targetType: TypeEnum) {
-  def types(): Set[TypeEnum] = {
+class Reduceness() {
+  def types(targetType: TypeEnum): Set[TypeEnum] = {
     targetType match {
       case Fire => Set(Glass)
       case Water => Set(Fire)

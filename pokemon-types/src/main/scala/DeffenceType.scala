@@ -9,8 +9,8 @@ class DeffenceType(val deffenceType: TypeEnum) {
   }
 
   def reduceness(): Set[TypeEnum] = {
-    var r: Reduceness = new Reduceness(deffenceType)
-    r.types()
+    var r: Reduceness = new Reduceness()
+    r.types(deffenceType)
   }
 
   def blockness(): Set[TypeEnum] = {

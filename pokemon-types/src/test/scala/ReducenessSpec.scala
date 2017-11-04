@@ -1,33 +1,29 @@
 import org.scalatest._
 
 class ReducenessSpec extends FlatSpec with DiagrammedAssertions {
+  val reduceness: Reduceness = new Reduceness()
+
   it should "ほのお has reduceness types くさ" in {
-    var reduceness: Reduceness = new Reduceness(Fire)
-    assert(reduceness.types() === Set(Glass))
+    assert(reduceness.types(Fire) === Set(Glass))
   }
 
   it should "みず has reduceness types ほのお" in {
-    var reduceness: Reduceness = new Reduceness(Water)
-    assert(reduceness.types() === Set(Fire))
+    assert(reduceness.types(Water) === Set(Fire))
   }
 
   it should "くさ has reduceness types みず" in {
-    var reduceness: Reduceness = new Reduceness(Glass)
-    assert(reduceness.types() === Set(Water))
+    assert(reduceness.types(Glass) === Set(Water))
   }
 
   it should "いわ has reduceness types ほのお" in {
-    var reduceness: Reduceness = new Reduceness(Rock)
-    assert(reduceness.types() === Set(Fire))
+    assert(reduceness.types(Rock) === Set(Fire))
   }
 
   it should "ゴースト has reduceness types none" in {
-    var reduceness: Reduceness = new Reduceness(Ghost)
-    assert(reduceness.types() === Set())
+    assert(reduceness.types(Ghost) === Set())
   }
 
   it should "かくとう has reduceness types いわ" in {
-    var reduceness: Reduceness = new Reduceness(Fight)
-    assert(reduceness.types() === Set(Rock))
+    assert(reduceness.types(Fight) === Set(Rock))
   }
 }
