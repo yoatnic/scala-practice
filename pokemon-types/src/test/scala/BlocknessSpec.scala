@@ -5,4 +5,9 @@ class BlocknessSpec extends FlatSpec with DiagrammedAssertions {
     var blockness: Blockness = new Blockness(Ghost)
     assert(blockness.types() === Set(Fight))
   }
+
+  it should "other types has blockness types none" in {
+    var blockness: Blockness = new Blockness(Fire)
+    assert(blockness.types() === Set())
+  }
 }
