@@ -1,14 +1,11 @@
 import org.scalatest._
 
 class DeffenceTypeSpec extends FlatSpec with DiagrammedAssertions {
-  it should "type name is ほのお" in {
-    var deffenceType: DeffenceType = new DeffenceType(Fire)
-    assert(deffenceType.name() === "ほのお")
-  }
-
-  it should "type name is みず" in {
-    var deffenceType: DeffenceType = new DeffenceType(Water)
-    assert(deffenceType.name() === "みず")
+  it should "typeof" in {
+    var fire: DeffenceType = new DeffenceType(Fire)
+    var water: DeffenceType = new DeffenceType(Water)
+    assert(fire.typeof() === Fire)
+    assert(water.typeof() === Water)
   }
 
   it should "weakness" in {

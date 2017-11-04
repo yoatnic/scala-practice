@@ -1,6 +1,6 @@
 class DeffenceType(val deffenceType: TypeEnum) {
-  def name(): String = {
-    deffenceType.name
+  def typeof(): TypeEnum = {
+    deffenceType
   }
 
   def weakness(): Set[TypeEnum] = {
