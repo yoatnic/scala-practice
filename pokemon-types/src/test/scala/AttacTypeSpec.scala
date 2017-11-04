@@ -5,4 +5,9 @@ class AttacTypeSpec extends FlatSpec with DiagrammedAssertions {
     var attackType: AttackType = new AttackType("ほのお")
     assert(attackType.name() === "ほのお")
   }
+
+  it should "type name is みず" in {
+    var attackType: AttackType = new AttackType("みず")
+    assert(attackType.name() === "みず")
+  }
 }
