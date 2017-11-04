@@ -1,5 +1,5 @@
-class Weakness(val targetType: TypeEnum) {
-  def types(): Set[TypeEnum] = {
+class Weakness() {
+  def types(targetType: TypeEnum): Set[TypeEnum] = {
     targetType match {
       case Fire => Set(Water, Rock)
       case Water => Set(Glass)

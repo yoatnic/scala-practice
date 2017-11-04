@@ -4,8 +4,8 @@ class DeffenceType(val deffenceType: TypeEnum) {
   }
 
   def weakness(): Set[TypeEnum] = {
-    var w: Weakness = new Weakness(deffenceType)
-    w.types()
+    var w: Weakness = new Weakness()
+    w.types(deffenceType)
   }
 
   def reduceness(): Set[TypeEnum] = {
