@@ -15,4 +15,9 @@ class DeffenceTypeSpec extends FlatSpec with DiagrammedAssertions {
     var glass: DeffenceType = new DeffenceType(Glass)
     assert(glass.weakness() === Set(Fire))
   }
+
+  it should "reduceness" in {
+    var glass: DeffenceType = new DeffenceType(Fight)
+    assert(glass.reduceness() === Set(Rock))
+  }
 }
