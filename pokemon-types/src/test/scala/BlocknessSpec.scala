@@ -2,6 +2,7 @@ import org.scalatest._
 
 class BlocknessSpec extends FlatSpec with DiagrammedAssertions {
   val blockness: Blockness = new Blockness()
+
   it should "ゴースト has blockness types かくとう" in {
     assert(blockness.types(Ghost) === Set(Fight))
   }

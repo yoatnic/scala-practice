@@ -9,17 +9,17 @@ class DeffenceTypeSpec extends FlatSpec with DiagrammedAssertions {
   }
 
   it should "weakness" in {
-    var glass: DeffenceType = new DeffenceType(Glass)
-    assert(glass.weakness() === Set(Fire))
+    var deffence: DeffenceType = new DeffenceType(Glass)
+    assert(deffence.weakness() === Set(Fire))
   }
 
   it should "reduceness" in {
-    var glass: DeffenceType = new DeffenceType(Fight)
-    assert(glass.reduceness() === Set(Rock))
+    var deffence: DeffenceType = new DeffenceType(Fight)
+    assert(deffence.reduceness() === Set(Rock))
   }
 
   it should "blockness" in {
-    var glass: DeffenceType = new DeffenceType(Ghost)
-    assert(glass.blockness() === Set(Fight))
+    var deffence: DeffenceType = new DeffenceType(Ghost)
+    assert(deffence.blockness() === Set(Fight))
   }
 }
